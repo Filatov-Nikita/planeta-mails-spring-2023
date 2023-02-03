@@ -1,0 +1,63 @@
+mixin title(title)
+  div.invisible-title= title
+
+mixin header(imgPath)
+  tr: td(align='center'): img(width='600' height='645' src=imgPath alt='Радуйте близких')
+
+mixin items(l1, l2, l3, l4, l5)
+  tr: td.items1(align='center')
+    table(cellpadding=0 cellspacing=0 border=0 width='100%')
+      tr
+        td.items1-td1
+          a.item.item-sm(href=l1) Ювелирные изделия и&nbsp;часы&nbsp;⌚
+        td.items1-td2
+          a.item.item-sm(href=l2) Бытовая техника и&nbsp;электроника&nbsp;🖥️
+  tr: td.items2(align='center')
+    table(cellpadding=0 cellspacing=0 border=0 width='100%')
+      tr
+        td.items2-td1
+          a.item(href=l3) Косметика и&nbsp;парфюмерия&nbsp;💄
+        td.items2-td2
+          a.item(href=l4) Подарки и&nbsp;цветы&nbsp;💐
+        td.items2-td3
+          a.item(href=l5) Товары для&nbsp;дома&nbsp;🏠
+
+mixin text
+  tr: td.info-td
+    table(cellpadding=0 cellspacing=0 border=0 width='100%')
+      tr: td(class="info" align='center' bgcolor='#ffffff')
+        block
+
+mixin itemsPic(imgPath)
+  tr: td(style={ width: '100%' })
+    img(width='600' height='500' src=imgPath alt='Призы')
+
+
+mixin gift(link, imgPath)
+  tr: td(style={ width: '100%' })
+    a.gift(href=link): img(width='600' height='300' src=imgPath alt='Подарочная карта')
+
+mixin footer(vk, tg, rut, yt, lk, name)
+  tr: td.footer-top
+    p.footer-title Подписывайтесь на нас в социальных сетях:
+  tr: td(style={ width: '100%' })
+    table(cellpadding=0 cellspacing=0 border=0 width='175' align='center')
+      tr
+        td: a.social-link(href=vk): img(src='https://learning.2apps.ru/planeta-spring/vk.png' width='32' height='32' alt='vk')
+        td: a.social-link(href=tg): img(src='https://learning.2apps.ru/planeta-spring/tg.png' width='32' height='32' alt='telegram')
+        td: a.social-link(href=rut): img(src='https://learning.2apps.ru/planeta-spring/rut.png' width='32' height='32' alt='rutube')
+        td: a.social-link(href=yt): img(src='https://learning.2apps.ru/planeta-spring/youtube.png' width='32' height='32' alt='youtube')
+  tr: td.footer-bottom
+    p.footer-text
+      | Данное рекламное сообщение не является офертой.
+      br
+      | Вы получили это сообщение, поскольку являетесь участником акции ТРК&nbsp;«#{name}».
+    br
+    p.footer-text
+      | Управлять подпиской можно в&nbsp;личном кабинете в&nbsp;разделе&nbsp;
+      a.footer-link(href=lk) «Подписки»
+      | .
+      br
+      | Если вы не хотите получать письма, нажмите, чтобы&nbsp;
+      a.footer-link(href='[Unsubscribe]') отписаться
+      | .

@@ -1,0 +1,294 @@
+.invisible-title {
+  font-size: 0px;
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+body {
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
+  font-family: 'Arial', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+img {
+  outline: none;
+  text-decoration: none;
+  border: none;
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  display: block;
+  -ms-interpolation-mode: bicubic;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+table td {
+  border-collapse: collapse;
+}
+
+table {
+  border: 0;
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+.items2 {
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 12px;
+}
+
+.items2-td1 {
+  width: 235px;
+  padding-right: 3px;
+}
+
+.items2-td2 {
+  width: 167px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.items2-td3 {
+  width: 170px;
+  padding-left: 3px;
+}
+
+.items1 {
+  padding-left: 31px;
+  padding-right: 31px;
+  padding-top: 13px;
+}
+
+.items1-td1 {
+  width: 250px;
+  padding-right: 5px;
+}
+
+.items1-td2 {
+  width: 277px;
+  padding-left: 5px;
+}
+
+.item {
+  border-radius: 5px;
+  background-color: #f14cae;
+  color: #ffffff;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  display: block;
+}
+
+.info {
+  border-radius: 15px;
+  padding-top: 20px;
+  padding-bottom: 17px;
+}
+
+.info-td {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 40px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.info-text {
+  font-size: 17px;
+  padding-left: 36px;
+  padding-right: 37px;
+  padding-bottom: 17px;
+  line-height: 22px;
+  font-weight: 400;
+  text-align: center;
+  color: #151515;
+}
+
+.info-more {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 12px;
+  color: #151515;
+  max-width: 339px;
+}
+
+.info-link {
+  color: #0053f3;
+  text-decoration: underline;
+}
+
+.footer-top {
+  padding-top: 50px;
+  padding-left: 49px;
+  padding-right: 49px;
+  padding-bottom: 15px;
+  width: 100%;
+}
+
+.footer-title {
+  font-weight: 400;
+  font-size: 15px;
+  color: #151515;
+  text-align: center;
+}
+
+.social-link {
+  display: block;
+}
+
+.footer-bottom {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  padding-left: 48px;
+  padding-right: 48px;
+  width: 100%;
+}
+
+.footer-text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #484848;
+}
+
+.footer-link {
+  text-decoration: underline;
+  color: #484848;
+}
+
+.table-600 {
+  width: 600px;
+}
+
+@media screen and (max-width: 620px) {
+  .table-600 {
+    width: 450px !important;
+  }
+
+  .item {
+    font-size: 11px !important;
+  }
+
+  .items1 {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+
+  .info-text {
+    font-size: 14px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-bottom: 0px !important;
+  }
+
+  .info-more {
+    font-size: 14px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .footer-top {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 25px !important;
+  }
+
+  .footer-bottom {
+    padding-bottom: 30px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    padding-top: 15px !important;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .table-600 {
+    width: 380px !important;
+  }
+
+  .item {
+    font-size: 10px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+
+  .items1 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .items1-td1 {
+    padding-right: 3px !important;
+  }
+
+  .items1-td2 {
+    padding-left: 3px !important;
+  }
+
+  .info-text {
+    font-size: 12px !important;
+    line-height: 15px !important;
+  }
+
+  .info-more {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .info-td {
+    padding-top: 25px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .footer-text {
+    font-size: 12px !important;
+  }
+
+  .footer-title {
+    font-size: 14px;
+  }
+}
+
+
+@media screen and (max-width: 390px) {
+  .table-600 {
+    width: 320px !important;
+  }
+
+  .items1 {
+    padding-left: 17px !important;
+    padding-right: 17px !important;
+  }
+
+  .item {
+    font-size: 8px !important;
+  }
+}

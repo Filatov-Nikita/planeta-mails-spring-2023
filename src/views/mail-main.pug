@@ -1,0 +1,41 @@
+extends layout.pug
+
+block content
+  include ./mixins.pug
+  +title('Весенняя ярмарка')
+  table(cellpadding=0 cellspacing=0 border=0 width='100%' bgcolor='#eceff1')
+    tr: td(height='30')
+    tr: td
+      table.table-600(cellpadding=0 cellspacing=0 border=0 bgcolor='#bbe2e1' align='center')
+        +header('https://learning.2apps.ru/planeta-spring/header-main.png')
+        +items(
+          'https://letomall.ru/stores-category/110',
+          'https://letomall.ru/stores-category/109',
+          'https://letomall.ru/stores-category/112',
+          'https://letomall.ru/stores-category/112',
+          'https://letomall.ru/stores-category/106',
+        )
+        +text
+          p.info-text
+            | Также с 22 февраля в ТРК «Лето» пройдет
+            span.bold  весенняя ярмарка
+            |  хенд-мейд изделий, а детей и взрослых ждет
+            span.bold  множество игр, конкурсов и мастер-классов.
+          p.info-more
+            | Более подробная информация об акциях и&nbsp;мероприятиях на&nbsp;сайте&nbsp;
+            a.info-link(href="https://letomall.ru/") letomall.ru
+          p.info-more Радуйте близких вместе с ТРК «Лето»!
+        +itemsPic('https://learning.2apps.ru/planeta-spring/items-people.png')
+        +gift(
+          'https://letomall.ru/gift-card/virtual?utm_source=Vk&utm_medium=Vk&utm_campaign=gift_cards&utm_content=gift_cards',
+          'https://learning.2apps.ru/planeta-spring/gift.jpg',
+        )
+        +footer(
+          'https://vk.com/letomall',
+          'https://t.me/trkleto',
+          'https://rutube.ru/channel/24719928/',
+          'https://www.youtube.com/channel/UCvZg0j-iRqNeZmbB4Adyx1g/videos',
+          'https://id.mall.tech/4/auth',
+          'Лето'
+        )
+    tr: td(height='30')
