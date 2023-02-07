@@ -1,0 +1,65 @@
+extends layout.pug
+
+block style
+  style
+    include style.css
+
+block content
+  include ./mixins.pug
+  +title('Весенняя ярмарка')
+  table(cellpadding=0 cellspacing=0 border=0 width='100%' bgcolor='#eceff1')
+    tr: td(height='30')
+    tr: td
+      table.table-600(cellpadding=0 cellspacing=0 border=0 bgcolor='#bbe2e1' align='center')
+        +webversion('https://letomall.ru/mail/d22a3bd9-61f9-423c-b473-17653a06e47e')
+        +header('https://learning.2apps.ru/planeta-spring/header-logo.png', 'вместе с ТРК «Лето»')
+        +info
+          p.info2-title
+            | Скоро праздники – самое время напомнить вашим близким о том,
+            | как&nbsp;сильно вы их любите ❤️
+          p.info2-p(style="margin-bottom: 20px")
+            | Порадуйте любимых на&nbsp;День защитника Отечества,
+            | День&nbsp;святого Валентина или&nbsp;Международный женский&nbsp;день идеальными&nbsp;подарками.
+            br
+            | В ТРК «Лето» более
+            span.bold  140 магазинов
+            |  на любой вкус, а&nbsp;также широкий выбор кафе и&nbsp;ресторанов.
+          p.info2-p
+            | Проведите праздничный вечер в компании самых родных&nbsp;людей
+            | в ресторане изысканной
+            br
+            | итальянской кухни&nbsp;
+            a.info-link.bold(href='https://letomall.ru/food/97968?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email')
+              | Pinzeria by Bontempi.
+        +items(
+          'https://letomall.ru/stores-category/110?utm_source=email&utm_medium=email&utm_campaign=gift_cards&utm_content=gift_cards',
+          'https://letomall.ru/stores-category/109?utm_source=email&utm_medium=email&utm_campaign=gift_cards&utm_content=gift_cards',
+          'https://letomall.ru/stores-category/112?utm_source=email&utm_medium=email&utm_campaign=gift_cards&utm_content=gift_cards',
+          'https://letomall.ru/stores-category/104?utm_source=email&utm_medium=email&utm_campaign=gift_cards&utm_content=gift_cards',
+          'https://letomall.ru/stores-category/106?utm_source=email&utm_medium=email&utm_campaign=gift_cards&utm_content=gift_cards',
+        )
+        +text
+          p.info-text
+            | С 22 февраля приглашаем на
+            span.bold  весеннюю ярмарку
+            |  хенд-мейд изделий и множество мероприятий
+            span.bold  для&nbsp;детей и&nbsp;взрослых в&nbsp;ТРК&nbsp;«Лето».
+          p.info-more
+            | Более подробная информация об акциях и&nbsp;мероприятиях на&nbsp;сайте&nbsp;
+            a.info-link(href="https://letomall.ru/?utm_source=email&utm_medium=email&utm_campaign=gift_cards&utm_content=gift_cards")
+              |letomall.ru
+          p.info-more(style='padding-top: 12px') Радуйте близких вместе с ТРК «Лето»!
+        +itemsPic('https://learning.2apps.ru/planeta-spring/items-people.png')
+        +gift(
+          'https://letomall.ru/gift-card/virtual?utm_source=email&utm_medium=email&utm_campaign=gift_cards&utm_content=gift_cards',
+          'https://learning.2apps.ru/planeta-spring/gift.jpg',
+        )
+        +footer(
+          'https://vk.com/letomall',
+          'https://t.me/trkleto',
+          'https://rutube.ru/channel/24719928/',
+          'https://www.youtube.com/channel/UCvZg0j-iRqNeZmbB4Adyx1g/videos',
+          'https://id.mall.tech/4/auth',
+          'Лето'
+        )
+    tr: td(height='30')

@@ -1,8 +1,21 @@
+mixin webversion(href)
+  tr: td.webver-td(align='right')
+    a.webver(href=href) Веб-версия письма
+
 mixin title(title)
   div.invisible-title= title
 
-mixin header(imgPath)
-  tr: td(align='center'): img(width='600' height='645' src=imgPath alt='Радуйте близких')
+mixin header(imgPath, text)
+  tr: td: table.header-table(align="center"): tr: td
+   img.header-img(width='773' height='359' src=imgPath alt='Радуйте близких')
+  tr: td
+    p.header-title= text
+
+mixin info
+  tr: td: table(align='center').info2-table: tr
+    td.info2-td1: img(src='https://learning.2apps.ru/planeta-spring/gift1.png' width='81' height='233')
+    td.info2-td2: div.info2-text: block
+    td.info2-td3: img(src='https://learning.2apps.ru/planeta-spring/gift2.png' width='87' height='146')
 
 mixin items(l1, l2, l3, l4, l5)
   tr: td.items1(align='center')

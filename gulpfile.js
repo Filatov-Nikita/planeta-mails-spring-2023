@@ -9,10 +9,9 @@ import { deleteAsync } from 'del';
 
 const browserSync = bsync.create();
 
-const watchedFiles = 'src/views/**/*.{pug,css}';
 const viewsPath = 'src/views/**/mail-*.pug';
 const imagesPath = 'src/images/**/*';
-const distPath = 'dist/';
+const distPath = './dist/';
 
 function delImages() {
   return deleteAsync(distPath + 'images');
@@ -32,20 +31,20 @@ export async function images() {
 
 export function compilePug() {
   return gulp.src(viewsPath)
-  .pipe(pug({ pretty: true}))
+  .pipe(pug({ pretty: true }))
   .pipe(rename({ extname: '.html' }))
   .pipe(inlineCss({ removeLinkTags: false, preserveMediaQueries: true  }))
-  .pipe(gulp.dest(distPath));
+  .pipe(gulp.dest(distPath))
+  .pipe(browserSync.stream({ match: '**/*.html' }));
 }
 
 export default function () {
   browserSync.init({
     server: {
-      baseDir: './dist'
+      baseDir: distPath
     }
-  })
-
-  gulp.watch(watchedFiles, compilePug).on('change', () => {
-    browserSync.reload();
   });
+
+  gulp.watch('src/views/**/*', compilePug);
+  gulp.watch('src/images/**/*.{jpeg,png}', images);
 }
