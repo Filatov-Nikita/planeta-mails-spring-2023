@@ -45,6 +45,13 @@ table {
   mso-table-rspace: 0pt;
 }
 
+.emogi {
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: middle;
+  display: inline;
+}
+
 .items2 {
   padding-left: 7px;
   padding-right: 7px;
@@ -134,6 +141,10 @@ table {
   padding-right: 10px;
   color: #151515;
   max-width: 339px;
+}
+
+.info-more2 {
+  max-width: 359px;
 }
 
 .info-link {

@@ -1,13 +1,18 @@
 import nodemailer from 'nodemailer';
 import fs from 'fs';
+import process from 'process';
+
+const mailName = process.argv[2] ?? 'ufa';
+
+console.log('for mail', mailName);
 
 const yandexLogin = 'nikita-filatov51@yandex.ru';
 
 const addresses = [
   yandexLogin,
   'nikita45454@gmail.com',
-  'adelya0712@gmail.com',
-  'adelyalink@yandex.ru'
+  // 'adelya0712@gmail.com',
+  // 'adelyalink@yandex.ru'
 ]
 
 const yandex = {
@@ -28,7 +33,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-const html = fs.readFileSync('./dist/mail-main.html');
+const html = fs.readFileSync(`./dist/mail-${mailName}.html`);
 
 const res = await transporter.sendMail({
   from: yandexLogin,

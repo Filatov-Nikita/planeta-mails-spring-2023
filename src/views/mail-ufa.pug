@@ -1,0 +1,69 @@
+extends layout.pug
+
+block style
+  style
+    include style.css
+
+block content
+  include ./mixins.pug
+  +title('Идеальные подарки на любой вкус в магазинах ТРЦ «Планета»')
+  table(cellpadding=0 cellspacing=0 border=0 width='100%' bgcolor='#eceff1')
+    tr: td(height='30')
+    tr: td
+      table.table-600(cellpadding=0 cellspacing=0 border=0 bgcolor='#bbe2e1' align='center')
+        +webversion('https://ufa.planeta-mall.ru/mail/7f002cdd-f218-4319-9b52-af8a6fbb1eb4')
+        +header('https://learning.2apps.ru/planeta-spring/header-logo.png', 'вместе с «ТРЦ Планета»')
+        +info
+          p.info2-title
+            | Скоро праздники – самое время напомнить вашим близким о том,
+            | как&nbsp;сильно вы их любите&nbsp;
+            img.emogi(src='https://learning.2apps.ru/planeta-spring/emogi/love.png' alt='emogi сердце')
+          p.info2-p(style="margin-bottom: 20px")
+            | Порадуйте любимых на&nbsp;День защитника Отечества,
+            | День&nbsp;святого Валентина или&nbsp;Международный женский&nbsp;день идеальными&nbsp;подарками.
+            br
+            | В ТРЦ «Планета» более
+            span.bold  180 магазинов
+            |  на любой вкус, а&nbsp;также широкий выбор кафе и&nbsp;ресторанов.
+          p.info2-p
+            | Проведите праздничный вечер в компании самых родных людей в ресторане&nbsp;
+            a.info-link.bold(href='#')
+              | «Разжигатели»
+            |  со вкусной едой, приготовленной с использованием огня.
+        +items(
+          'https://ufa.planeta-mall.ru/stores-category/110?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://ufa.planeta-mall.ru/stores-category/109?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://ufa.planeta-mall.ru/stores-category/112?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://ufa.planeta-mall.ru/stores-category/104?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://ufa.planeta-mall.ru/stores-category/106?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+        )
+        +text
+          p.info-text
+            | С 12 февраля приглашаем на большую
+            span.bold  весеннюю ярмарку
+            | , где будут представлены товары для праздников:
+            span.bold  подарки, дизайнерская одежда, украшения.
+          p.info-more.info-more2
+            | Каждую субботу Вас ждут интересные мастер-классы,
+            | а в дни праздников - тематические развлечения
+            span.bold  для всей семьи.
+          p.info-more.info-more2(style='padding-top: 22px')
+            | Более подробная информация об акциях
+            | и мероприятиях на сайте
+            a.info-link(href="https://ufa.planeta-mall.ru?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email")  ufa.planeta-mall.ru!
+          p.info-more.info-more2(style='padding-top: 12px') Радуйте близких вместе с ТРЦ «Планета»!
+        +itemsPic('https://learning.2apps.ru/planeta-spring/items-people.png')
+        +gift(
+          '#',
+          'https://learning.2apps.ru/planeta-spring/gift-planeta.jpg',
+        )
+        +footer(
+          'https://vk.com/trc_planeta_ufa',
+          'https://t.me/trc_planeta_ufa',
+          'https://rutube.ru/channel/24694861',
+          'https://www.youtube.com/channel/UCwQ9kwTOFChkJKrMOMqJ-pg',
+          'https://id.mall.tech/4/auth',
+          'Планета',
+          'ТРЦ'
+        )
+    tr: td(height='30')
