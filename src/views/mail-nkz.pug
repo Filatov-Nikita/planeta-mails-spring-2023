@@ -1,0 +1,63 @@
+extends layout.pug
+
+block style
+  style
+    include style.css
+
+block content
+  include ./mixins.pug
+  +title('Идеальные подарки на любой вкус в магазинах ТРЦ «Планета»')
+  table(cellpadding=0 cellspacing=0 border=0 width='100%' bgcolor='#eceff1')
+    tr: td(height='30')
+    tr: td
+      table.table-600(cellpadding=0 cellspacing=0 border=0 bgcolor='#bbe2e1' align='center')
+        +webversion('https://nkz.planeta-mall.ru/mail/fa083334-1ac8-4a3c-b41f-55c9bc3c0a07')
+        +header('https://learning.2apps.ru/planeta-spring/header-logo.png', 'вместе с «ТРЦ Планета»')
+        +info
+          p.info2-title
+            | Скоро праздники – самое время напомнить вашим близким о том,
+            | как&nbsp;сильно вы их любите&nbsp;
+            img.emogi(src='https://learning.2apps.ru/planeta-spring/emogi/love.png' alt='emogi сердце')
+          p.info2-p(style="margin-bottom: 20px")
+            | Порадуйте любимых на&nbsp;День защитника Отечества,
+            | День&nbsp;святого Валентина или&nbsp;Международный женский&nbsp;день идеальными&nbsp;подарками.
+            br
+            | В ТРЦ «Планета» более
+            span.bold  120 магазинов
+            |  на любой вкус, а&nbsp;также широкий выбор кафе и&nbsp;ресторанов.
+          p.info2-p
+            | Проведите праздничный вечер в компании самых родных людей в&nbsp;ресторане#{' '}
+            a.info-link.bold(href='https://nkz.planeta-mall.ru/food/52163?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email')
+              | «Пивоварня&nbsp;Яна&nbsp;Гримуса».
+        +items(
+          'https://nkz.planeta-mall.ru/stores-category/110?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://nkz.planeta-mall.ru/stores-category/109?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://nkz.planeta-mall.ru/stores-category/112?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://nkz.planeta-mall.ru/stores-category/104?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://nkz.planeta-mall.ru/stores-category/106?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+        )
+        +text
+          p.info-text
+            | С 17 февраля приглашаем на большую
+            span.bold  весеннюю ярмарку
+            |  хенд-мейд изделий в&nbsp;ТРЦ&nbsp;«Планета».
+          p.info-more.info-more2
+            | Более подробная информация об акциях
+            | и&nbsp;мероприятиях на&nbsp;сайте#{' '}
+            a.info-link(href='https://nkz.planeta-mall.ru?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email') nkz.planeta-mall.ru
+          p.info-more.info-more2(style='padding-top: 12px') Радуйте близких вместе с&nbsp;ТРЦ&nbsp;«Планета»!
+        +itemsPic('https://learning.2apps.ru/planeta-spring/items-people.png')
+        +gift(
+          'https://nkz.planeta-mall.ru/gift-card/virtual?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://learning.2apps.ru/planeta-spring/gift-planeta.jpg',
+        )
+        +footer(
+          'https://vk.com/planet_novokuznetsk',
+          'https://t.me/planeta_nvkz',
+          'https://rutube.ru/channel/24664094/',
+          'https://www.youtube.com/channel/UCUFk9TKgw2kOIZcZfmoShcQ/videos',
+          'https://id.mall.tech/2/auth',
+          'Планета',
+          'ТРЦ'
+        )
+    tr: td(height='30')
