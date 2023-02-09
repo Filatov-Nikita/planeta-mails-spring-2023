@@ -1,0 +1,65 @@
+extends layout.pug
+
+block style
+  style
+    include style.css
+
+block content
+  include ./mixins.pug
+  +title('Идеальные подарки на любой вкус в магазинах ТРЦ «Аура»')
+  table(cellpadding=0 cellspacing=0 border=0 width='100%' bgcolor='#eceff1')
+    tr: td(height='30')
+    tr: td
+      table.table-600(cellpadding=0 cellspacing=0 border=0 bgcolor='#bbe2e1' align='center')
+        +webversion('https://aura.planeta-mall.ru/mail/88f4dbd2-c5e1-4da7-9879-b7424db25f47')
+        +header('https://learning.2apps.ru/planeta-spring/header-logo.png', 'вместе с ТРЦ «Аура»')
+        +info
+          p.info2-title
+            | Скоро праздники – самое время напомнить вашим близким о том,
+            | как&nbsp;сильно вы их любите&nbsp;
+            img.emogi(src='https://learning.2apps.ru/planeta-spring/emogi/love.png' alt='emogi сердце')
+          p.info2-p(style="margin-bottom: 20px")
+            | Порадуйте любимых на&nbsp;День защитника Отечества,
+            | День&nbsp;святого Валентина или&nbsp;Международный женский&nbsp;день идеальными&nbsp;подарками.
+            br
+            | В ТРЦ «Аура» более
+            span.bold  180 магазинов
+            |  с&nbsp;товарами на&nbsp;любой вкус, а&nbsp;также широкий выбор кафе и&nbsp;ресторанов.
+          p.info2-p
+            | Проведите праздничный вечер в&nbsp;ресторане#{' '}
+            a.info-link.bold(href='https://aura.planeta-mall.ru/food/52285?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email')
+              | «Хочу&nbsp;Пури»
+            |  с&nbsp;атмосферой грузинского дома, природы и&nbsp;современности.
+        +items(
+          'https://aura.planeta-mall.ru/stores-category/110?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://aura.planeta-mall.ru/stores-category/109?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://aura.planeta-mall.ru/stores-category/112?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://aura.planeta-mall.ru/stores-category/104?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://aura.planeta-mall.ru/stores-category/106?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+        )
+        +text
+          p.info-text
+            | С 17 февраля приглашаем на&nbsp;
+            span.bold весеннюю ярмарку
+            |  хенд-мейд изделийx и&nbsp;множество мероприятий
+            span.bold  для&nbsp;детей и&nbsp;взрослых в&nbsp;ТРЦ&nbsp;«Аура».
+          p.info-more.info-more2
+            | Более подробная информация об акциях
+            | и&nbsp;мероприятиях на&nbsp;сайте#{' '}
+            a.info-link(href='https://aura.planeta-mall.ru?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email') aura.planeta-mall.ru
+          p.info-more.info-more2(style='padding-top: 12px') Радуйте близких вместе с ТРЦ «Аура»!
+        +itemsPic('https://learning.2apps.ru/planeta-spring/items-people.png')
+        +gift(
+          'https://aura.planeta-mall.ru/gift-card/virtual?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://learning.2apps.ru/planeta-spring/gift-aura.jpg',
+        )
+        +footer(
+          'https://vk.com/club25135803',
+          'https://t.me/joinchat/AAAAAEvjNNgpcuvgLcOIvw',
+          'https://rutube.ru/channel/24669800/',
+          'https://www.youtube.com/channel/UCuqi4Hnj6dL8UyppURFKDaQ/videos',
+          '#',
+          'Аура',
+          'ТРЦ'
+        )
+    tr: td(height='30')
