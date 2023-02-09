@@ -1,0 +1,64 @@
+extends layout.pug
+
+block style
+  style
+    include style.css
+
+block content
+  include ./mixins.pug
+  +title('Идеальные подарки на любой вкус в магазинах ТРЦ «Планета»')
+  table(cellpadding=0 cellspacing=0 border=0 width='100%' bgcolor='#eceff1')
+    tr: td(height='30')
+    tr: td
+      table.table-600(cellpadding=0 cellspacing=0 border=0 bgcolor='#bbe2e1' align='center')
+        +webversion('https://krs.planeta-mall.ru/mail/b904fd6e-95ff-4309-af81-f7a62ec3fa66')
+        +header('https://learning.2apps.ru/planeta-spring/header-logo.png', 'вместе с «ТРЦ Планета»')
+        +info
+          p.info2-title
+            | Скоро праздники – самое время напомнить вашим близким о том,
+            | как&nbsp;сильно вы их любите&nbsp;
+            img.emogi(src='https://learning.2apps.ru/planeta-spring/emogi/love.png' alt='emogi сердце')
+          p.info2-p(style="margin-bottom: 20px")
+            | Порадуйте любимых на&nbsp;День защитника Отечества,
+            | День&nbsp;святого Валентина или&nbsp;Международный женский&nbsp;день идеальными&nbsp;подарками.
+            br
+            | В ТРЦ «Планета» более
+            span.bold  180 магазинов
+            |  на любой вкус, а&nbsp;также широкий выбор кафе и&nbsp;ресторанов.
+          p.info2-p
+            | Проведите праздничный вечер в компании самых родных людей в кафе итальянской кухни
+            a.info-link.bold(href='https://krs.planeta-mall.ru/food/51401?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email')
+              |  Green&nbsp;Villa&nbsp;Pizza.
+        +items(
+          'https://krs.planeta-mall.ru/stores-category/110?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://krs.planeta-mall.ru/stores-category/109?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://krs.planeta-mall.ru/stores-category/112?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://krs.planeta-mall.ru/stores-category/104?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://krs.planeta-mall.ru/stores-category/106?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+        )
+        +text
+          p.info-text
+            | С 16 февраля приглашаем на&nbsp;
+            span.bold весеннюю ярмарку Маркет подарков&nbsp;
+            | и множество мероприятий
+            span.bold  для&nbsp;детей и&nbsp;взрослых в&nbsp;ТРЦ&nbsp;«Планета».
+          p.info-more.info-more2
+            | Более подробная информация об акциях
+            | и&nbsp;мероприятиях на сайте&nbsp;
+            a.info-link(href='https://krs.planeta-mall.ru?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email') krs.planeta-mall.ru
+          p.info-more.info-more2(style='padding-top: 12px') Радуйте близких вместе с ТРЦ «Планета»!
+        +itemsPic('https://learning.2apps.ru/planeta-spring/items-people.png')
+        +gift(
+          'https://krs.planeta-mall.ru/gift-card?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email',
+          'https://learning.2apps.ru/planeta-spring/gift-planeta.jpg',
+        )
+        +footer(
+          'https://vk.com/public50952130',
+          'https://t.me/tc_planeta',
+          'https://rutube.ru/channel/24664992',
+          'https://www.youtube.com/channel/UCCcsNs80DRLL-lF6JzV1_eg/videos',
+          '#',
+          'Планета',
+          'ТРЦ'
+        )
+    tr: td(height='30')
