@@ -62,7 +62,7 @@ mixin gift(link, imgPath)
   tr: td(style={ width: '100%' })
     a.gift(href=link): img(width='600' height='300' src=imgPath alt='Подарочная карта')
 
-mixin footer(vk, tg, rut, yt, lk, name, type = 'ТРК')
+mixin footer(vk, tg, rut, yt, lk, name, type = 'ТРК', ok)
   tr: td.footer-top
     p.footer-title Подписывайтесь на нас в социальных сетях:
   tr: td(style={ width: '100%' })
@@ -70,6 +70,8 @@ mixin footer(vk, tg, rut, yt, lk, name, type = 'ТРК')
       tr
         td: a.social-link(href=vk): img(src='https://learning.2apps.ru/planeta-spring/vk.png' width='32' height='32' alt='vk')
         td: a.social-link(href=tg): img(src='https://learning.2apps.ru/planeta-spring/tg.png' width='32' height='32' alt='telegram')
+        if ok
+          td: a.social-link(href=ok): img(src='https://learning.2apps.ru/planeta-spring/ok.png' width='32' height='32' alt='ok')
         td: a.social-link(href=rut): img(src='https://learning.2apps.ru/planeta-spring/rut.png' width='32' height='32' alt='rutube')
         td: a.social-link(href=yt): img(src='https://learning.2apps.ru/planeta-spring/youtube.png' width='32' height='32' alt='youtube')
   tr: td.footer-bottom

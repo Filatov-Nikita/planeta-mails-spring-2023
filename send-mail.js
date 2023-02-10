@@ -11,8 +11,8 @@ const yandexLogin = 'nikita-filatov51@yandex.ru';
 const addresses = [
   yandexLogin,
   'nikita45454@gmail.com',
-  // 'adelya0712@gmail.com',
-  // 'adelyalink@yandex.ru'
+  'adelya0712@gmail.com',
+  'adelyalink@yandex.ru'
 ]
 
 const yandex = {
