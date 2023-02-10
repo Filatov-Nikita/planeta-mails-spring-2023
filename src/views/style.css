@@ -224,6 +224,7 @@ table {
 
 .webver-td {
   padding-top: 10px;
+  padding-bottom: 10px;
   padding-right: 24px;
 }
 
@@ -286,6 +287,10 @@ table {
 @media screen and (max-width: 620px) {
   .table-600 {
     width: 450px !important;
+  }
+
+  .header-title {
+    font-size: 26px !important;
   }
 
   .header-table {
@@ -373,7 +378,7 @@ table {
   }
 
   .header-title {
-    font-size: 26px !important;
+    font-size: 24px !important;
   }
 
   .info2-p {
@@ -454,6 +459,10 @@ table {
 @media screen and (max-width: 390px) {
   .table-600 {
     width: 320px !important;
+  }
+
+  .header-title {
+    font-size: 22px !important;
   }
 
   .header-table {
