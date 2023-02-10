@@ -66,12 +66,41 @@ mixin footer(vk, tg, rut, yt, lk, name, type = 'ТРК', ok)
   tr: td.footer-top
     p.footer-title Подписывайтесь на нас в социальных сетях:
   tr: td(style={ width: '100%' })
-    table(cellpadding=0 cellspacing=0 border=0 width='175' align='center')
+    table(cellpadding=0 cellspacing=0 border=0 width=ok ? '220' : '175' align='center')
       tr
         td: a.social-link(href=vk): img(src='https://learning.2apps.ru/planeta-spring/vk.png' width='32' height='32' alt='vk')
         td: a.social-link(href=tg): img(src='https://learning.2apps.ru/planeta-spring/tg.png' width='32' height='32' alt='telegram')
         if ok
           td: a.social-link(href=ok): img(src='https://learning.2apps.ru/planeta-spring/ok.png' width='32' height='32' alt='ok')
+        td: a.social-link(href=rut): img(src='https://learning.2apps.ru/planeta-spring/rut.png' width='32' height='32' alt='rutube')
+        td: a.social-link(href=yt): img(src='https://learning.2apps.ru/planeta-spring/youtube.png' width='32' height='32' alt='youtube')
+  tr: td.footer-bottom
+    p.footer-text
+      | Данное рекламное сообщение не является офертой.
+      br
+      | Вы получили это сообщение, поскольку являетесь участником акции #{type}&nbsp;«#{name}».
+    br
+    p.footer-text
+      | Управлять подпиской можно в&nbsp;личном кабинете в&nbsp;разделе&nbsp;
+      a.footer-link(href=lk) «Подписки»
+      | .
+      br
+      | Если вы не хотите получать письма, нажмите, чтобы&nbsp;
+      a.footer-link(href='[Unsubscribe]') отписаться
+      | .
+
+mixin footerAura(vk, tg, rut, yt, lk, name, type = 'ТРК')
+  tr: td.footer-top.footer-top2
+    table(align='center'): tr: td(align='center')
+      a(href='https://aura.planeta-mall.ru/?utm_source=email&utm_medium=email&utm_campaign=email&utm_content=email')
+        img(width='116' height='106' src='https://learning.2apps.ru/planeta-spring/aura-logo.png')
+      p.footer-aura-address ТРЦ&nbsp;«Аура», Новосибирск, ул.&nbsp;Военная, д.&nbsp;5
+    p.footer-title Подписывайтесь на нас в социальных сетях:
+  tr: td(style={ width: '100%' })
+    table(cellpadding=0 cellspacing=0 border=0 width='175' align='center')
+      tr
+        td: a.social-link(href=vk): img(src='https://learning.2apps.ru/planeta-spring/vk.png' width='32' height='32' alt='vk')
+        td: a.social-link(href=tg): img(src='https://learning.2apps.ru/planeta-spring/tg.png' width='32' height='32' alt='telegram')
         td: a.social-link(href=rut): img(src='https://learning.2apps.ru/planeta-spring/rut.png' width='32' height='32' alt='rutube')
         td: a.social-link(href=yt): img(src='https://learning.2apps.ru/planeta-spring/youtube.png' width='32' height='32' alt='youtube')
   tr: td.footer-bottom

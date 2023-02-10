@@ -164,6 +164,20 @@ table {
   width: 100%;
 }
 
+.footer-top2 {
+  padding-top: 20px;
+}
+
+.footer-aura-address {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: bold;
+  color: #000000;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
 .footer-title {
   font-weight: 400;
   font-size: 15px;
@@ -337,6 +351,10 @@ table {
     padding-top: 25px !important;
   }
 
+  .footer-top2 {
+    padding-top: 10px !important;
+  }
+
   .footer-bottom {
     padding-bottom: 30px !important;
     padding-left: 15px !important;
@@ -423,7 +441,12 @@ table {
   }
 
   .footer-title {
-    font-size: 14px;
+    font-size: 14px !important;
+  }
+
+  .footer-aura-address {
+    font-size: 14px !important;
+    padding-bottom: 30px !important;
   }
 }
 
@@ -449,5 +472,9 @@ table {
   .info-td {
     padding-left: 30px !important;
     padding-right: 30px !important;
+  }
+
+  .footer-aura-address {
+    font-size: 12px !important;
   }
 }
